@@ -81,7 +81,7 @@ async function runDescription() {
   console.log(`Markdown descriptions saved to ${markdownOptions.output}`);
 
   // Scenario 3: Generate descriptions for a remote GitHub repository
-  const remoteRepoPath = 'https://github.com/IonGireada/repo-description.git';
+  const remoteRepoPath = 'https://github.com/ioncakephper/repo-description.git';
   const remoteOptions = {
     cloneDir: './cloned_repos', // Directory to clone the remote repo into
     format: 'json',
@@ -108,7 +108,7 @@ Use the `repo-describer` command directly in your terminal:
 repo-describer . -o descriptions.json -f json
 
 # Generate Markdown descriptions for a remote GitHub repository, clone it to a specific directory, and include a summary and table format
-repo-describer https://github.com/IonGireada/repo-description.git -c ./cloned_repos -o repo-descriptions.md -f markdown --summary --table
+repo-describer https://github.com/ioncakephper/repo-description.git -c ./cloned_repos -o repo-descriptions.md -f markdown --summary --table
 
 # Generate descriptions for the current repository, ignoring specific patterns, and update a markdown-magic config file
 repo-describer . -i "dist" "build" --update-config ./md.config.js --transform-name myDescriptions
