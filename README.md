@@ -201,6 +201,14 @@ Options:
 
   <!-- end-doc-gen -->
 
+## Contributing
+
+We welcome contributions to `repo-description`! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute, including reporting bugs, suggesting enhancements, and making code contributions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Acknowledgments
 
 <!-- doc-gen ACKNOWLEDGEMENTS -->
