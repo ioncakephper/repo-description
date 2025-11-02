@@ -1,60 +1,19 @@
 name: Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      version_type:
-        description: 'Type of version bump (patch, minor, major)'
-        required: true
-        default: 'patch'
-
-env:
-  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  push:
+    branches:
+      - main
 
 jobs:
-  release:
+  release-please:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Required for conventional-changelog
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
+      - uses: actions/checkout@v4
       - name: Install dependencies
         run: npm install
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Bump version and create tag
-        id: bump_version
-        run: |
-          npm version ${{ github.event.inputs.version_type }} -m "Release: v%s"
-          echo "NEW_VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_OUTPUT
-
-      - name: Generate Changelog
-        run: |
-          npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0
-          git add CHANGELOG.md
-
-      - name: Commit and Push changes
-        run: |
-          git commit -m "docs: update CHANGELOG.md for v${{ steps.bump_version.outputs.NEW_VERSION }}"
-          git push
-          git push --tags
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+      - uses: google-github-actions/release-please@v4.4.0
+        id: release
         with:
-          tag_name: v${{ steps.bump_version.outputs.NEW_VERSION }}
-          name: Release v${{ steps.bump_version.outputs.NEW_VERSION }}
-          body_path: CHANGELOG.md
-          prerelease: false
-          draft: false
+          release-type: node
+          package-name: repo-description
