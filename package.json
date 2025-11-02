@@ -43,12 +43,12 @@
   ],
   "scripts": {
     "describe": "node src/cli.js . --update-config md.config.js --transform-name fileTreeExtended",
-    "describe:file": "node src/cli.js . --output descriptions.json",
+    "describe:file": "node src/cli.js . --output _descriptions.json",
     "docs": "npx markdown-magic@3.7.0 **/*.md -c md.config.js",
     "format": "prettier --write .",
     "lint": "eslint src/ **/*.js **/*.json",
     "lint:fix": "eslint --fix src/ **/*.js **/*.json",
-    "prep": "npm run docs && npm run lint:fix && npm run format",
+    "prep": "npm run describe:file && npm run docs && npm run lint:fix && npm run format",
     "test": "jest --passWithNoTests"
   },
   "jest": {
