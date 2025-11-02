@@ -2,6 +2,12 @@
 
 > An AI-powered CLI tool that automatically generates clear, natural-language descriptions for every file within a given repository. `repo-description` helps developers quickly understand unfamiliar codebases, onboard new team members, and maintain comprehensive documentation effortlessly. By leveraging advanced AI, it transforms raw code into insightful summaries, making project navigation and collaboration significantly smoother.
 
+<!-- doc-gen BADGES -->
+
+[![npm version](https://img.shields.io/npm/v/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![npm downloads](https://img.shields.io/npm/dw/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![actions status](https://img.shields.io/github/actions/workflow/status/IonGireada/repo-description/ci.yml?branch=main&style=for-the-badge)](https://github.com/IonGireada/repo-description/actions) [![codecov](https://img.shields.io/codecov/c/github/IonGireada/repo-description?branch=main&style=for-the-badge)](https://codecov.io/gh/IonGireada/repo-description) [![release](https://img.shields.io/github/v/release/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/releases) [![maintained](https://img.shields.io/github/commit-activity/y/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/graphs/commit-activity) [![stars](https://img.shields.io/github/stars/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/stargazers) [![forks](https://img.shields.io/github/forks/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/network/members) [![watchers](https://img.shields.io/github/watchers/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/watchers) [![last commit](https://img.shields.io/github/last-commit/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/commits) [![contributors](https://img.shields.io/github/contributors/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/graphs/contributors) [![issues](https://img.shields.io/github/issues/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/issues) [![pull requests](https://img.shields.io/github/issues-pr/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/pulls) [![repo size](https://img.shields.io/github/repo-size/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description) [![top language](https://img.shields.io/github/languages/top/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description) [![languages](https://img.shields.io/github/languages/count/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/search?l=)
+
+<!-- end-doc-gen -->
+
 ## Features
 
 - **AI-Powered Descriptions**: Generates concise, natural-language summaries for individual files using advanced AI models.
@@ -10,12 +16,6 @@
 - **Customizable Ignoring**: Exclude specific files or directories (e.g., `node_modules`, `.git`) from the description process.
 - **Markdown-Magic Integration**: Seamlessly updates `markdown-magic.config.js` files to embed descriptions directly into your documentation.
 - **CLI & Module Usage**: Can be used as a standalone command-line tool or integrated as a JavaScript module within other projects.
-
-<!-- doc-gen BADGES -->
-
-[![npm version](https://img.shields.io/npm/v/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![npm downloads](https://img.shields.io/npm/dw/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![actions status](https://img.shields.io/github/actions/workflow/status/IonGireada/repo-description/ci.yml?branch=main&style=for-the-badge)](https://github.com/IonGireada/repo-description/actions) [![codecov](https://img.shields.io/codecov/c/github/IonGireada/repo-description?branch=main&style=for-the-badge)](https://codecov.io/gh/IonGireada/repo-description) [![release](https://img.shields.io/github/v/release/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/releases) [![maintained](https://img.shields.io/github/commit-activity/y/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/graphs/commit-activity) [![stars](https://img.shields.io/github/stars/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/stargazers) [![forks](https://img.shields.io/github/forks/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/network/members) [![watchers](https://img.shields.io/github/watchers/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/watchers) [![last commit](https://img.shields.io/github/last-commit/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/commits) [![contributors](https://img.shields.io/github/contributors/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/graphs/contributors) [![issues](https://img.shields.io/github/issues/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/issues) [![pull requests](https://img.shields.io/github/issues-pr/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/pulls) [![repo size](https://img.shields.io/github/repo-size/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description) [![top language](https://img.shields.io/github/languages/top/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description) [![languages](https://img.shields.io/github/languages/count/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/search?l=)
-
-<!-- end-doc-gen -->
 
 ## Getting Started
 
@@ -179,43 +179,43 @@ Options:
 
 <!-- doc-gen COMMANDS format=list -->
 
-- `describe` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [86](./package.json#L86))
+- `describe` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [85](./package.json#L85))
 
   ```bash
   node src/cli.js . descriptions.json && node src/cli.js . descriptions.md --format markdown && node src/cli.js . descriptions-table.md --format markdown --table && node src/cli.js . descriptions-summary.md --format markdown --summary && node src/cli.js . descriptions-table-summary.md --format markdown --table --summary
   ```
 
-- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [91](./package.json#L91))
+- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [90](./package.json#L90))
 
   ```bash
   npx markdown-magic@3.7.0 **/*.md -c md.config.js
   ```
 
-- `format` — Formats the codebase using Prettier. (line [89](./package.json#L89))
+- `format` — Formats the codebase using Prettier. (line [88](./package.json#L88))
 
   ```bash
   prettier --write .
   ```
 
-- `lint` — Lints the codebase for potential errors and style violations. (line [87](./package.json#L87))
+- `lint` — Lints the codebase for potential errors and style violations. (line [86](./package.json#L86))
 
   ```bash
   eslint src/ **/*.js **/*.json
   ```
 
-- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [88](./package.json#L88))
+- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [87](./package.json#L87))
 
   ```bash
   eslint --fix src/ **/*.js **/*.json
   ```
 
-- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [90](./package.json#L90))
+- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [89](./package.json#L89))
 
   ```bash
   npm run docs && npm run lint:fix && npm run format
   ```
 
-- `test` — Runs the test suite using Jest. (line [85](./package.json#L85))
+- `test` — Runs the test suite using Jest. (line [84](./package.json#L84))
 
   ```bash
   jest --passWithNoTests
