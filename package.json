@@ -1,0 +1,79 @@
+{
+  "name": "repo-description",
+  "version": "1.0.0",
+  "description": "**Description:**  \nAI‑powered CLI that automatically generates clear, natural‑language descriptions of every file in a repository.",
+  "keywords": [
+    "cli",
+    "ai",
+    "file‑description",
+    "repository",
+    "code‑analysis",
+    "natural‑language",
+    "command‑line",
+    "tool",
+    "automation",
+    "openai"
+  ],
+  "license": "MIT",
+  "author": "",
+  "main": "src/index.js",
+  "bin": {
+    "repo-describer": "src/cli.js"
+  },
+  "files": [
+    "src/",
+    "README.md"
+  ],
+  "scripts": {
+    "describe": "node src/cli.js . descriptions.json && node src/cli.js . descriptions.md --format markdown && node src/cli.js . descriptions-table.md --format markdown --table && node src/cli.js . descriptions-summary.md --format markdown --summary && node src/cli.js . descriptions-table-summary.md --format markdown --table --summary",
+    "docs": "npx markdown-magic@3.7.0 **/*.md -c md.config.js",
+    "format": "prettier --write .",
+    "lint": "eslint src/ **/*.js **/*.json",
+    "lint:fix": "eslint --fix src/ **/*.js **/*.json",
+    "prep": "npm run docs && npm run lint:fix && npm run format",
+    "test": "jest --passWithNoTests"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "dotenv": "^17.2.3",
+    "groq-sdk": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.5",
+    "@eslint/js": "^9.38.0",
+    "babel-jest": "^30.2.0",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsonc": "^2.21.0",
+    "eslint-plugin-yaml": "^1.1.3",
+    "globals": "^16.5.0",
+    "jest": "^30.2.0",
+    "jsonc-eslint-parser": "^2.4.1",
+    "markdown-magic-install-extended": "^1.2.0",
+    "markdown-magic-scripts": "^1.4.0",
+    "markdown-magic-transform-acknowledgements": "^1.2.2",
+    "markdown-magic-transform-badges": "^1.1.6",
+    "markdown-magic-transform-treefile-extended": "^1.2.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "yaml-eslint-parser": "^1.3.0"
+  },
+  "scriptMeta": {
+    "test": "Runs the test suite using Jest.",
+    "describe": "Generates AI-powered descriptions for repository files and outputs them in various formats."
+  },
+  "scriptsMeta": {
+    "test": "Runs the test suite using Jest.",
+    "describe": "Generates AI-powered descriptions for repository files and outputs them in various formats.",
+    "lint": "Lints the codebase for potential errors and style violations.",
+    "lint:fix": "Lints the codebase and automatically fixes fixable issues.",
+    "format": "Formats the codebase using Prettier.",
+    "prep": "Prepares the codebase by generating documentation, linting, and formatting.",
+    "docs": "Generates documentation by processing Markdown files with markdown-magic."
+  }
+}

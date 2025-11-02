@@ -1,0 +1,48 @@
+name: Repo Describer
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  describe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # allow pushing changes back to repo
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate JSON Descriptions
+        env:
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+        run: |
+          npx repo-describer . repo_descriptions.json --format json
+
+      - name: Generate Markdown Descriptions
+        env:
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+        run: |
+          npx repo-describer . repo_descriptions.md --format markdown --summary
+
+      - name: Update README.md
+        env:
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+        run: |
+          npx repo-describer . repo_descriptions.md --format markdown --summary --readme ./README.md
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md repo_descriptions.json repo_descriptions.md
+          git commit -m "chore: update file descriptions [skip ci]" || echo "No changes to commit"
+          git push
