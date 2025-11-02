@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/ioncakephper/repo-description/compare/v1.0.4...v1.0.5) (2025-11-02)
+
+
+### Bug Fixes
+
+* **readme:** Show file sizes and add key file descriptions in project structure ([9f2cdf9](https://github.com/ioncakephper/repo-description/commit/9f2cdf9cc5b95ae6338323e74698b5c205efeafa))
+
 ## [1.0.4](https://github.com/ioncakephper/repo-description/compare/v1.0.3...v1.0.4) (2025-11-02)
 
 ### Bug Fixes
