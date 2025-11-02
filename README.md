@@ -245,7 +245,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [@eslint/js](https://www.npmjs.com/package/%40eslint%2Fjs) — ESLint JavaScript language implementation
 - [babel-jest](https://www.npmjs.com/package/babel-jest) — Jest plugin to use babel for transformation.
 - [commander](https://www.npmjs.com/package/commander) — the complete solution for node.js command-line programs
-- [conventional-changelog-cli](https://www.npmjs.com/package/conventional-changelog-cli) — No description available
 - [dotenv](https://www.npmjs.com/package/dotenv) — Loads environment variables from .env file
 - [eslint](https://www.npmjs.com/package/eslint) — An AST-based pattern checker for JavaScript.
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier) — Turns off all rules that are unnecessary or might conflict with Prettier.
@@ -273,24 +272,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 repo-description/
 ├── __tests__
 │   ├── .gitkeep
-│   └── cli.test.js
+│   └── cli.test.js        # Description unavailable.
 ├── .qodo
 │   ├── agents
 │   └── workflows
 ├── src
-│   ├── cli.js
-│   ├── describe.js
-│   ├── index.js
-│   └── utils.js
-├── .env                   # Description unavailable.
+│   ├── cli.js             # Description unavailable.
+│   ├── describe.js        # Description unavailable.
+│   ├── index.js           # Description unavailable.
+│   └── utils.js           # Description unavailable.
+├── .env                   # Configure... the environment by setting the `GROQ_API_KEY` variable to provide authentication for Groq API access.
 ├── .gitignore
-├── .prettierrc.json       # Description unavailable.
-├── babel.config.js        # Description unavailable.
-├── CHANGELOG.md
-├── CONTRIBUTING.md        # Description unavailable.
-├── eslint.config.js       # Description unavailable.
-├── LICENSE                # Description unavailable.
-├── md.config.js           # Description unavailable.
+├── .prettierrc.json       # Configure Prettier to enforce single quotes, trailing commas (es5), an 80‑character print width, and a specific ordering of fields in package.json via the prettier‑plugin‑packagejson.
+├── babel.config.js        # [configure] Babel to use @babel/preset‑env with the target set to the current Node version…
+├── CHANGELOG.md           # Documenting the project's version history by listing each release’s features, bug fixes, and related metadata in a Keep‑a‑Changelog format.
+├── CONTRIBUTING.md        # Guide contributors on how to report bugs, suggest enhancements, and submit code via pull requests.
+├── eslint.config.js       # Configure ESLint with global browser, node, and jest globals, recommended core and Prettier rules, and custom JSON/JSONC and YAML parsers and plugins for those file types.
+├── LICENSE                # Granting permission to use, copy, modify, merge, publish, distribute, sublicense, and sell the software freely under the MIT License.
+├── md.config.js           # [Exports] a configuration object that defines default settings (like file descriptions and badge style) and registers the markdown‑magic transform modules used to generate and augment the project’s documentation.
 ├── package-lock.json      # Description unavailable.
 ├── package.json           # Description unavailable.
 ├── README.md              # Description unavailable.
