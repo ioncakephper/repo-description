@@ -5,32 +5,24 @@ name: Release
 
 on:
   push:
-    # Trigger on push to the primary branch (usually 'main' or 'master')
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   release-please:
     runs-on: ubuntu-latest
     permissions:
-      # Required for creating releases and pushing changes to the repository
       contents: write
-      # Required for managing pull requests (Crucial for creating the release PR)
       pull-requests: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # 1. Run the release-please action
-      # Using the recommended 'googleapis/release-please-action'
-      - name: Run Release Please
-        uses: googleapis/release-please-action@v4
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: node
+          package-name: repo-description
           target-branch: main
-          # Passing the GITHUB_TOKEN via the 'token' input for maximum reliability
-          # in creating Pull Requests (resolves the permission error).
           token: ${{ secrets.GITHUB_TOKEN }}
