@@ -62,7 +62,7 @@ We welcome pull requests! To contribute code:
 
 To get started with development, you'll need Node.js installed.
 
-1.  Clone the repository: `git clone https://github.com/IonGireada/repo-description.git`
+1.  Clone the repository: `git clone https://github.com/ioncakephper/repo-description.git`
 2.  Navigate to the project directory: `cd repo-description`
 3.  Install dependencies: `npm install`
 
