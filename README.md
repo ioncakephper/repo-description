@@ -179,43 +179,49 @@ Options:
 
 <!-- doc-gen COMMANDS format=list -->
 
-- `describe` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [85](./package.json#L85))
+- `describe` — Update repository descriptions in md.config.js transformDefaults for fileTreeExtended. (line [92](./package.json#L92))
 
   ```bash
-  node src/cli.js . descriptions.json && node src/cli.js . descriptions.md --format markdown && node src/cli.js . descriptions-table.md --format markdown --table && node src/cli.js . descriptions-summary.md --format markdown --summary && node src/cli.js . descriptions-table-summary.md --format markdown --table --summary
+  node src/cli.js . --update-config md.config.js --transform-name fileTreeExtended
   ```
 
-- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [90](./package.json#L90))
+- `describe:file` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [86](./package.json#L86))
+
+  ```bash
+  node src/cli.js . --output descriptions.json
+  ```
+
+- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [91](./package.json#L91))
 
   ```bash
   npx markdown-magic@3.7.0 **/*.md -c md.config.js
   ```
 
-- `format` — Formats the codebase using Prettier. (line [88](./package.json#L88))
+- `format` — Formats the codebase using Prettier. (line [89](./package.json#L89))
 
   ```bash
   prettier --write .
   ```
 
-- `lint` — Lints the codebase for potential errors and style violations. (line [86](./package.json#L86))
+- `lint` — Lints the codebase for potential errors and style violations. (line [87](./package.json#L87))
 
   ```bash
   eslint src/ **/*.js **/*.json
   ```
 
-- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [87](./package.json#L87))
+- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [88](./package.json#L88))
 
   ```bash
   eslint --fix src/ **/*.js **/*.json
   ```
 
-- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [89](./package.json#L89))
+- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [90](./package.json#L90))
 
   ```bash
   npm run docs && npm run lint:fix && npm run format
   ```
 
-- `test` — Runs the test suite using Jest. (line [84](./package.json#L84))
+- `test` — Runs the test suite using Jest. (line [85](./package.json#L85))
 
   ```bash
   jest --passWithNoTests
@@ -276,18 +282,18 @@ repo-description/
 │   ├── index.js
 │   ├── refactor-package.js
 │   └── utils.js
-├── .env
+├── .env                       # Description unavailable.
 ├── .gitignore
-├── .prettierrc.json
-├── babel.config.js
-├── CONTRIBUTING.md
-├── eslint.config.js
-├── LICENSE
-├── md.config.js
-├── package-lock.json
-├── package.json
-├── README.md
-└── RULES_OF_CONDUCT.md
+├── .prettierrc.json           # Description unavailable.
+├── babel.config.js            # Description unavailable.
+├── CONTRIBUTING.md            # Description unavailable.
+├── eslint.config.js           # Description unavailable.
+├── LICENSE                    # Description unavailable.
+├── md.config.js               # Description unavailable.
+├── package-lock.json          # Description unavailable.
+├── package.json               # Description unavailable.
+├── README.md                  # Description unavailable.
+└── RULES_OF_CONDUCT.md        # Description unavailable.
 ```
 
 <!-- end-doc-gen -->

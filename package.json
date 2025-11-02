@@ -42,7 +42,8 @@
     "README.md"
   ],
   "scripts": {
-    "describe": "node src/cli.js . descriptions.json && node src/cli.js . descriptions.md --format markdown && node src/cli.js . descriptions-table.md --format markdown --table && node src/cli.js . descriptions-summary.md --format markdown --summary && node src/cli.js . descriptions-table-summary.md --format markdown --table --summary",
+    "describe": "node src/cli.js . --update-config md.config.js --transform-name fileTreeExtended",
+    "describe:file": "node src/cli.js . --output descriptions.json",
     "docs": "npx markdown-magic@3.7.0 **/*.md -c md.config.js",
     "format": "prettier --write .",
     "lint": "eslint src/ **/*.js **/*.json",
@@ -82,11 +83,12 @@
   },
   "scriptsMeta": {
     "test": "Runs the test suite using Jest.",
-    "describe": "Generates AI-powered descriptions for repository files and outputs them in various formats.",
+    "describe:file": "Generates AI-powered descriptions for repository files and outputs them in various formats.",
     "lint": "Lints the codebase for potential errors and style violations.",
     "lint:fix": "Lints the codebase and automatically fixes fixable issues.",
     "format": "Formats the codebase using Prettier.",
     "prep": "Prepares the codebase by generating documentation, linting, and formatting.",
-    "docs": "Generates documentation by processing Markdown files with markdown-magic."
+    "docs": "Generates documentation by processing Markdown files with markdown-magic.",
+    "describe": "Update repository descriptions in md.config.js transformDefaults for fileTreeExtended."
   }
 }

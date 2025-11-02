@@ -6,7 +6,7 @@ Please note that this project is released with a [Code of Conduct](RULES_OF_COND
 
 ## How Can I Contribute?
 
-### Reporting Bugs 
+### Reporting Bugs
 
 If you find a bug, please open an issue on our [GitHub Issues page](https://github.com/IonGireada/repo-description/issues). When reporting a bug, please include:
 
