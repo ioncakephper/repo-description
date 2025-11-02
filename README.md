@@ -19,9 +19,7 @@
 
 ## Getting Started
 
-:::note
 **Important:** Before running, create a `.env` file in your project root with your Groq API key. The key must be named `GROQ_API_KEY`. You can obtain an API key by creating an account and visiting [https://console.groq.com/keys](https://console.groq.com/keys).
-:::
 
 ### Installation
 
