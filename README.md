@@ -1,6 +1,15 @@
 # repo-description
 
-> AI‑powered CLI that automatically generates clear, natural‑language descriptions of every file in a repository.
+> An AI-powered CLI tool that automatically generates clear, natural-language descriptions for every file within a given repository. `repo-description` helps developers quickly understand unfamiliar codebases, onboard new team members, and maintain comprehensive documentation effortlessly. By leveraging advanced AI, it transforms raw code into insightful summaries, making project navigation and collaboration significantly smoother.
+
+## Features
+
+- **AI-Powered Descriptions**: Generates concise, natural-language summaries for individual files using advanced AI models.
+- **Flexible Output Formats**: Supports output in JSON or Markdown, allowing for easy integration into various workflows.
+- **Repository Agnostic**: Works with both local directories and remote GitHub repositories (automatically clones them).
+- **Customizable Ignoring**: Exclude specific files or directories (e.g., `node_modules`, `.git`) from the description process.
+- **Markdown-Magic Integration**: Seamlessly updates `markdown-magic.config.js` files to embed descriptions directly into your documentation.
+- **CLI & Module Usage**: Can be used as a standalone command-line tool or integrated as a JavaScript module within other projects.
 
 <!-- doc-gen BADGES -->
 
@@ -8,7 +17,13 @@
 
 <!-- end-doc-gen -->
 
-## Installation
+## Getting Started
+
+:::note
+**Important:** Before running, create a `.env` file in your project root with your Groq API key. The key must be named `GROQ_API_KEY`. You can obtain an API key by creating an account and visiting [https://console.groq.com/keys](https://console.groq.com/keys).
+:::
+
+### Installation
 
 <!-- doc-gen INSTALL global=true -->
 
@@ -22,11 +37,7 @@ yarn add -g repo-description
 
 <!-- end-doc-gen -->
 
-## Usage
-
-:::note
-**Important:** Before running, create a `.env` file in your project root with your Groq API key. The key name should be `GROQ_API_KEY`. You can obtain an API key by creating an account and visiting [https://console.groq.com/keys](https://console.groq.com/keys).
-:::
+### Usage
 
 ### As a JavaScript Module
 
@@ -108,6 +119,19 @@ repo-describer . -i "dist" "build" --update-config ./md.config.js --transform-na
 repo-describer --help
 ```
 
+## Configuration
+
+`repo-description` requires an API key from [Groq](https://groq.com) to function. Follow these steps to configure your API key:
+
+1.  **Obtain an API Key**: Visit [https://console.groq.com/keys](https://console.groq.com/keys) and create a new API key.
+2.  **Create `.env` file**: In the root directory of your project (or where you run `repo-describer`), create a file named `.env`.
+3.  **Add API Key**: Add your Groq API key to the `.env` file in the format:
+    ```
+    GROQ_API_KEY=your_groq_api_key_here
+    ```
+
+Ensure your `.env` file is included in your `.gitignore` to prevent your API key from being committed to version control.
+
 ## CLI API
 
 ### Help Output
@@ -157,43 +181,43 @@ Options:
 
 <!-- doc-gen COMMANDS format=list -->
 
-- `describe` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [89](./package.json#L89))
+- `describe` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [86](./package.json#L86))
 
   ```bash
   node src/cli.js . descriptions.json && node src/cli.js . descriptions.md --format markdown && node src/cli.js . descriptions-table.md --format markdown --table && node src/cli.js . descriptions-summary.md --format markdown --summary && node src/cli.js . descriptions-table-summary.md --format markdown --table --summary
   ```
 
-- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [94](./package.json#L94))
+- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [91](./package.json#L91))
 
   ```bash
   npx markdown-magic@3.7.0 **/*.md -c md.config.js
   ```
 
-- `format` — Formats the codebase using Prettier. (line [92](./package.json#L92))
+- `format` — Formats the codebase using Prettier. (line [89](./package.json#L89))
 
   ```bash
   prettier --write .
   ```
 
-- `lint` — Lints the codebase for potential errors and style violations. (line [90](./package.json#L90))
+- `lint` — Lints the codebase for potential errors and style violations. (line [87](./package.json#L87))
 
   ```bash
   eslint src/ **/*.js **/*.json
   ```
 
-- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [91](./package.json#L91))
+- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [88](./package.json#L88))
 
   ```bash
   eslint --fix src/ **/*.js **/*.json
   ```
 
-- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [93](./package.json#L93))
+- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [90](./package.json#L90))
 
   ```bash
   npm run docs && npm run lint:fix && npm run format
   ```
 
-- `test` — Runs the test suite using Jest. (line [88](./package.json#L88))
+- `test` — Runs the test suite using Jest. (line [85](./package.json#L85))
 
   ```bash
   jest --passWithNoTests
@@ -242,6 +266,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ```
 repo-description/
+├── __tests__
+│   ├── .gitkeep
+│   └── cli.test.js
 ├── .qodo
 │   ├── agents
 │   └── workflows
@@ -255,11 +282,14 @@ repo-description/
 ├── .gitignore
 ├── .prettierrc.json
 ├── babel.config.js
+├── CONTRIBUTING.md
 ├── eslint.config.js
+├── LICENSE
 ├── md.config.js
 ├── package-lock.json
 ├── package.json
-└── README.md
+├── README.md
+└── RULES_OF_CONDUCT.md
 ```
 
 <!-- end-doc-gen -->

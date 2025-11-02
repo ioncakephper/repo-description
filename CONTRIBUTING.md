@@ -10,11 +10,11 @@ Please note that this project is released with a [Code of Conduct](RULES_OF_COND
 
 If you find a bug, please open an issue on our [GitHub Issues page](https://github.com/IonGireada/repo-description/issues). When reporting a bug, please include:
 
-*   A clear and concise description of the bug.
-*   Steps to reproduce the behavior.
-*   Expected behavior.
-*   Screenshots or error messages if applicable.
-*   Your operating system and Node.js version.
+- A clear and concise description of the bug.
+- Steps to reproduce the behavior.
+- Expected behavior.
+- Screenshots or error messages if applicable.
+- Your operating system and Node.js version.
 
 ### Suggesting Enhancements
 
@@ -72,8 +72,8 @@ You can then use the scripts defined in `package.json` for linting, formatting, 
 
 This project uses ESLint and Prettier to enforce code style. Please ensure your code is formatted and linted correctly before submitting a pull request.
 
-*   Format your code: `npm run format`
-*   Lint your code: `npm run lint`
-*   Fix linting issues: `npm run lint:fix`
+- Format your code: `npm run format`
+- Lint your code: `npm run lint`
+- Fix linting issues: `npm run lint:fix`
 
 Thank you for contributing!

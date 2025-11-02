@@ -1,10 +1,9 @@
 ---
 name: General Question
 about: Ask a general question about the project
-title: "[QUESTION] <short description of question>"
-labels: ["question", "triage"]
+title: '[QUESTION] <short description of question>'
+labels: ['question', 'triage']
 assignees: ''
-
 ---
 
 **What is your question?**
