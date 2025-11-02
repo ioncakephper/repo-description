@@ -179,49 +179,49 @@ Options:
 
 <!-- doc-gen COMMANDS format=list -->
 
-- `describe` — Update repository descriptions in md.config.js transformDefaults for fileTreeExtended. (line [92](./package.json#L92))
+- `describe` — Update repository descriptions in md.config.js transformDefaults for fileTreeExtended. (line [93](./package.json#L93))
 
   ```bash
   node src/cli.js . --update-config md.config.js --transform-name fileTreeExtended
   ```
 
-- `describe:file` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [86](./package.json#L86))
+- `describe:file` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [87](./package.json#L87))
 
   ```bash
   node src/cli.js . --output descriptions.json
   ```
 
-- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [91](./package.json#L91))
+- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [92](./package.json#L92))
 
   ```bash
   npx markdown-magic@3.7.0 **/*.md -c md.config.js
   ```
 
-- `format` — Formats the codebase using Prettier. (line [89](./package.json#L89))
+- `format` — Formats the codebase using Prettier. (line [90](./package.json#L90))
 
   ```bash
   prettier --write .
   ```
 
-- `lint` — Lints the codebase for potential errors and style violations. (line [87](./package.json#L87))
+- `lint` — Lints the codebase for potential errors and style violations. (line [88](./package.json#L88))
 
   ```bash
   eslint src/ **/*.js **/*.json
   ```
 
-- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [88](./package.json#L88))
+- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [89](./package.json#L89))
 
   ```bash
   eslint --fix src/ **/*.js **/*.json
   ```
 
-- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [90](./package.json#L90))
+- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [91](./package.json#L91))
 
   ```bash
   npm run docs && npm run lint:fix && npm run format
   ```
 
-- `test` — Runs the test suite using Jest. (line [85](./package.json#L85))
+- `test` — Runs the test suite using Jest. (line [86](./package.json#L86))
 
   ```bash
   jest --passWithNoTests
@@ -245,6 +245,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [@eslint/js](https://www.npmjs.com/package/%40eslint%2Fjs) — ESLint JavaScript language implementation
 - [babel-jest](https://www.npmjs.com/package/babel-jest) — Jest plugin to use babel for transformation.
 - [commander](https://www.npmjs.com/package/commander) — the complete solution for node.js command-line programs
+- [conventional-changelog-cli](https://www.npmjs.com/package/conventional-changelog-cli) — No description available
 - [dotenv](https://www.npmjs.com/package/dotenv) — Loads environment variables from .env file
 - [eslint](https://www.npmjs.com/package/eslint) — An AST-based pattern checker for JavaScript.
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier) — Turns off all rules that are unnecessary or might conflict with Prettier.
@@ -280,20 +281,20 @@ repo-description/
 │   ├── cli.js
 │   ├── describe.js
 │   ├── index.js
-│   ├── refactor-package.js
 │   └── utils.js
-├── .env                       # Description unavailable.
+├── .env                   # Description unavailable.
 ├── .gitignore
-├── .prettierrc.json           # Description unavailable.
-├── babel.config.js            # Description unavailable.
-├── CONTRIBUTING.md            # Description unavailable.
-├── eslint.config.js           # Description unavailable.
-├── LICENSE                    # Description unavailable.
-├── md.config.js               # Description unavailable.
-├── package-lock.json          # Description unavailable.
-├── package.json               # Description unavailable.
-├── README.md                  # Description unavailable.
-└── RULES_OF_CONDUCT.md        # Description unavailable.
+├── .prettierrc.json       # Description unavailable.
+├── babel.config.js        # Description unavailable.
+├── CHANGELOG.md
+├── CONTRIBUTING.md        # Description unavailable.
+├── eslint.config.js       # Description unavailable.
+├── LICENSE                # Description unavailable.
+├── md.config.js           # Description unavailable.
+├── package-lock.json      # Description unavailable.
+├── package.json           # Description unavailable.
+├── README.md              # Description unavailable.
+└── RULES_OF_CONDUCT.md    # Description unavailable.
 ```
 
 <!-- end-doc-gen -->
