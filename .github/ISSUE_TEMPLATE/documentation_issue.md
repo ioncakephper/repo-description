@@ -1,10 +1,9 @@
 ---
 name: Documentation Issue
 about: Report an issue with the documentation
-title: "[DOCS] <short description of documentation issue>"
-labels: ["documentation", "triage"]
+title: '[DOCS] <short description of documentation issue>'
+labels: ['documentation', 'triage']
 assignees: ''
-
 ---
 
 **Describe the documentation issue**

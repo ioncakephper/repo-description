@@ -207,4 +207,7 @@ module.exports = {
   describeRepo,
   updateMarkdownMagicConfig,
   saveOutput,
+  getAllFiles,
+  queryGroq,
+  sleep,
 };

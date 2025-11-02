@@ -80,7 +80,6 @@
     "prettier-plugin-packagejson": "^2.5.19",
     "yaml-eslint-parser": "^1.3.0"
   },
-
   "scriptsMeta": {
     "test": "Runs the test suite using Jest.",
     "describe": "Generates AI-powered descriptions for repository files and outputs them in various formats.",

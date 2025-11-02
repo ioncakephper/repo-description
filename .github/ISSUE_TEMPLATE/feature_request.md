@@ -1,10 +1,9 @@
 ---
 name: Feature Request
 about: Suggest an idea for this project
-title: "[FEATURE] <short description of feature>"
-labels: ["enhancement", "triage"]
+title: '[FEATURE] <short description of feature>'
+labels: ['enhancement', 'triage']
 assignees: ''
-
 ---
 
 **Is your feature request related to a problem? Please describe.**
