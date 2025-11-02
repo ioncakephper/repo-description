@@ -1,5 +1,20 @@
 {
-  "README.md": "Provides an overview of the repository and its usage.",
-  "src/cli.js": "Handles command-line interface parsing and execution.",
-  "package.json": "Defines project metadata, scripts, and dependencies."
+  ".gitignore": "define files and directories to be ignored by Git version control.",
+  ".prettierrc.json": "configure Prettier code formatting rules for consistent style.",
+  "babel.config.js": "set up Babel configuration for JavaScript transpilation.",
+  "CONTRIBUTING.md": "outline contribution guidelines for developers working on the project.",
+  "eslint.config.js": "configure ESLint rules for linting JavaScript and JSON files.",
+  "LICENSE": "declare project licensing terms under the MIT License.",
+  "md.config.js": "configure markdown-magic settings for automated documentation updates.",
+  "package-lock.json": "lock exact versions of installed npm dependencies.",
+  "package.json": "define project metadata, dependencies, and npm scripts.",
+  "README.md": "introduce the project, its purpose, features, and usage instructions.",
+  "RULES_OF_CONDUCT.md": "establish community standards and expected behavior for contributors.",
+  "__tests__/cli.test.js": "test CLI functionality to ensure correct behavior.",
+  "__tests__/.gitkeep": "preserve empty test directory structure in version control.",
+  "src/cli.js": "implement command-line interface logic for running the tool.",
+  "src/describe.js": "handle repository file analysis and description generation.",
+  "src/index.js": "export main module entry point for external usage.",
+  "src/refactor-package.js": "refactor package.json structure for consistency and readability.",
+  "src/utils.js": "provide utility functions to support core operations."
 }

@@ -3,9 +3,7 @@
 > An AI-powered CLI tool that automatically generates clear, natural-language descriptions for every file within a given repository. `repo-description` helps developers quickly understand unfamiliar codebases, onboard new team members, and maintain comprehensive documentation effortlessly. By leveraging advanced AI, it transforms raw code into insightful summaries, making project navigation and collaboration significantly smoother.
 
 <!-- doc-gen BADGES -->
-
 [![npm version](https://img.shields.io/npm/v/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![npm downloads](https://img.shields.io/npm/dw/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![actions status](https://img.shields.io/github/actions/workflow/status/ioncakephper/repo-description/ci.yml?branch=main&style=for-the-badge)](https://github.com/ioncakephper/repo-description/actions) [![codecov](https://img.shields.io/codecov/c/github/ioncakephper/repo-description?branch=main&style=for-the-badge)](https://codecov.io/gh/ioncakephper/repo-description) [![release](https://img.shields.io/github/v/release/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/releases) [![maintained](https://img.shields.io/github/commit-activity/y/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/graphs/commit-activity) [![stars](https://img.shields.io/github/stars/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/stargazers) [![forks](https://img.shields.io/github/forks/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/network/members) [![watchers](https://img.shields.io/github/watchers/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/watchers) [![last commit](https://img.shields.io/github/last-commit/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/commits) [![contributors](https://img.shields.io/github/contributors/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/graphs/contributors) [![issues](https://img.shields.io/github/issues/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/issues) [![pull requests](https://img.shields.io/github/issues-pr/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/pulls) [![repo size](https://img.shields.io/github/repo-size/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description) [![top language](https://img.shields.io/github/languages/top/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description) [![languages](https://img.shields.io/github/languages/count/ioncakephper/repo-description?style=for-the-badge)](https://github.com/ioncakephper/repo-description/search?l=)
-
 <!-- end-doc-gen -->
 
 ## Features
@@ -24,7 +22,6 @@
 ### Installation
 
 <!-- doc-gen INSTALL global=true -->
-
 ```bash
 npm install -g repo-description
 ```
@@ -32,7 +29,6 @@ npm install -g repo-description
 ```bash
 yarn add -g repo-description
 ```
-
 <!-- end-doc-gen -->
 
 ### Usage
@@ -178,7 +174,6 @@ Options:
 ## Helpful Scripts
 
 <!-- doc-gen COMMANDS format=list -->
-
 - `describe` — Update repository descriptions in md.config.js transformDefaults for fileTreeExtended. (line [92](./package.json#L92))
 
   ```bash
@@ -226,7 +221,6 @@ Options:
   ```bash
   jest --passWithNoTests
   ```
-
   <!-- end-doc-gen -->
 
 ## Contributing
@@ -240,7 +234,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 <!-- doc-gen ACKNOWLEDGEMENTS -->
-
 - [@babel/preset-env](https://www.npmjs.com/package/%40babel%2Fpreset-env) — A Babel preset for each environment.
 - [@eslint/js](https://www.npmjs.com/package/%40eslint%2Fjs) — ESLint JavaScript language implementation
 - [babel-jest](https://www.npmjs.com/package/babel-jest) — Jest plugin to use babel for transformation.
@@ -267,34 +260,32 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Project Structure
 
 <!-- doc-gen fileTreeExtended showSize=true showDescriptions=true descriptionsFile=_descriptions.json -->
-
 ```
 repo-description/
 ├── __tests__
-│   ├── .gitkeep (66 B)
-│   └── cli.test.js (792 B)
+│   ├── .gitkeep (66 B)             # preserve empty test directory structure in version control.
+│   └── cli.test.js (807 B)         # test CLI functionality to ensure correct behavior.
 ├── .qodo
 │   ├── agents
 │   └── workflows
 ├── src
-│   ├── cli.js (2.7 KB)             # Handles command-line interface parsing and execution.
-│   ├── describe.js (8.3 KB)
-│   ├── index.js (308 B)
-│   └── utils.js (0 B)
-├── _descriptions.json (221 B)
+│   ├── cli.js (2.7 KB)             # implement command-line interface logic for running the tool.
+│   ├── describe.js (8.3 KB)        # handle repository file analysis and description generation.
+│   ├── index.js (308 B)            # export main module entry point for external usage.
+│   └── utils.js (0 B)              # provide utility functions to support core operations.
+├── _descriptions.json (1.5 KB)
 ├── .env (69 B)
-├── .gitignore (2.1 KB)
-├── .prettierrc.json (563 B)
-├── babel.config.js (92 B)
-├── CHANGELOG.md (2.3 KB)
-├── CONTRIBUTING.md (2.9 KB)
-├── eslint.config.js (1.1 KB)
-├── LICENSE (1.0 KB)
-├── md.config.js (438 B)
-├── package-lock.json (297.6 KB)
-├── package.json (3.1 KB)           # Defines project metadata, scripts, and dependencies.
-├── README.md (16.6 KB)             # Provides an overview of the repository and its usage.
-└── RULES_OF_CONDUCT.md (4.9 KB)
+├── .gitignore (2.1 KB)             # define files and directories to be ignored by Git version control.
+├── .prettierrc.json (563 B)        # configure Prettier code formatting rules for consistent style.
+├── babel.config.js (92 B)          # set up Babel configuration for JavaScript transpilation.
+├── CHANGELOG.md (2.6 KB)
+├── CONTRIBUTING.md (2.9 KB)        # outline contribution guidelines for developers working on the project.
+├── eslint.config.js (1.1 KB)       # configure ESLint rules for linting JavaScript and JSON files.
+├── LICENSE (1.0 KB)                # declare project licensing terms under the MIT License.
+├── md.config.js (438 B)            # configure markdown-magic settings for automated documentation updates.
+├── package-lock.json (297.6 KB)    # lock exact versions of installed npm dependencies.
+├── package.json (3.1 KB)           # define project metadata, dependencies, and npm scripts.
+├── README.md (17.4 KB)             # introduce the project, its purpose, features, and usage instructions.
+└── RULES_OF_CONDUCT.md (4.9 KB)    # establish community standards and expected behavior for contributors.
 ```
-
 <!-- end-doc-gen -->
