@@ -144,8 +144,13 @@ async function updateMarkdownMagicConfig(
     throw new Error(`Config file not found: ${absPath}`);
   }
 
-  const config = require(absPath);
+  let fileContent = fs.readFileSync(absPath, 'utf8');
 
+  // Use require to get the current config object for in-memory manipulation.
+  // This allows us to easily update the descriptions.
+  let config = require(absPath);
+
+  // Ensure transformDefaults and the specific transformName exist in the in-memory config
   if (!config.transformDefaults) {
     config.transformDefaults = {};
   }
@@ -153,11 +158,49 @@ async function updateMarkdownMagicConfig(
     config.transformDefaults[transformName] = {};
   }
 
+  // Update the descriptions in the in-memory config object
   config.transformDefaults[transformName].descriptions = descriptions;
 
-  // Write back to file
-  const newConfig = `module.exports = ${JSON.stringify(config, null, 2)};\n`;
-  fs.writeFileSync(absPath, newConfig);
+  // Now, we need to update the file content string.
+  // We will find the 'transformDefaults' property and replace its value.
+  // This regex is designed to find 'transformDefaults:' followed by its object literal.
+  // It's still somewhat fragile and relies on consistent formatting.
+  const transformDefaultsRegex = /(transformDefaults:\s*)(\{[\s\S]*?\})/m;
+  const match = fileContent.match(transformDefaultsRegex);
+
+  if (match) {
+    // The original string for transformDefaults (including the key and colon)
+    const originalTransformDefaultsString = match[0];
+    // The object literal part of transformDefaults
+    // const originalTransformDefaultsObjectString = match[2]; // Not directly used for replacement
+
+    // Stringify only the updated transformDefaults from the in-memory config.
+    // This is safe because 'descriptions' is expected to be a JSON-serializable object.
+    const updatedTransformDefaultsObjectString = JSON.stringify(
+      config.transformDefaults,
+      null,
+      2
+    );
+
+    // Reconstruct the new transformDefaults string to be inserted back into the file
+    const newTransformDefaultsString =
+      match[1] + updatedTransformDefaultsObjectString;
+
+    // Replace the old transformDefaults string with the new one in the file content
+    fileContent = fileContent.replace(
+      originalTransformDefaultsString,
+      newTransformDefaultsString
+    );
+  } else {
+    // If the 'transformDefaults' block is not found, we'll throw an error.
+    // A more complete solution would involve adding the block if it's missing,
+    // but that significantly increases complexity and fragility with string manipulation.
+    throw new Error(
+      'Could not find transformDefaults block in config file. Please ensure it exists and is correctly formatted.'
+    );
+  }
+
+  fs.writeFileSync(absPath, fileContent);
   console.log(`Updated ${transformName}.descriptions in ${configPath}`);
 }
 

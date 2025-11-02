@@ -5,6 +5,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch Config Program",
+      "program": "${workspaceFolder}\\src\\cli.js",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "args": [
+        ".",
+        "--update-config",
+        "md.config.js",
+        "--transform-name",
+        "fileTreeExtended"
+      ]
+    },
+    {
       "name": "Launch Programmatic Program",
       "program": "${workspaceFolder}\\example\\programmatic-use.js",
       "request": "launch",

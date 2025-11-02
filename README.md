@@ -179,49 +179,49 @@ Options:
 
 <!-- doc-gen COMMANDS format=list -->
 
-- `describe` — Update repository descriptions in md.config.js transformDefaults for fileTreeExtended. (line [93](./package.json#L93))
+- `describe` — Update repository descriptions in md.config.js transformDefaults for fileTreeExtended. (line [92](./package.json#L92))
 
   ```bash
   node src/cli.js . --update-config md.config.js --transform-name fileTreeExtended
   ```
 
-- `describe:file` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [87](./package.json#L87))
+- `describe:file` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [86](./package.json#L86))
 
   ```bash
-  node src/cli.js . --output descriptions.json
+  node src/cli.js . --output _descriptions.json
   ```
 
-- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [92](./package.json#L92))
+- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [91](./package.json#L91))
 
   ```bash
   npx markdown-magic@3.7.0 **/*.md -c md.config.js
   ```
 
-- `format` — Formats the codebase using Prettier. (line [90](./package.json#L90))
+- `format` — Formats the codebase using Prettier. (line [89](./package.json#L89))
 
   ```bash
   prettier --write .
   ```
 
-- `lint` — Lints the codebase for potential errors and style violations. (line [88](./package.json#L88))
+- `lint` — Lints the codebase for potential errors and style violations. (line [87](./package.json#L87))
 
   ```bash
   eslint src/ **/*.js **/*.json
   ```
 
-- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [89](./package.json#L89))
+- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [88](./package.json#L88))
 
   ```bash
   eslint --fix src/ **/*.js **/*.json
   ```
 
-- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [91](./package.json#L91))
+- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [90](./package.json#L90))
 
   ```bash
-  npm run docs && npm run lint:fix && npm run format
+  npm run describe:file && npm run docs && npm run lint:fix && npm run format
   ```
 
-- `test` — Runs the test suite using Jest. (line [86](./package.json#L86))
+- `test` — Runs the test suite using Jest. (line [85](./package.json#L85))
 
   ```bash
   jest --passWithNoTests
@@ -266,7 +266,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Project Structure
 
-<!-- doc-gen fileTreeExtended showSize=false showDescriptions=true descriptionsFile=descriptions.json -->
+<!-- doc-gen fileTreeExtended showSize=false showDescriptions=true descriptionsFile=_descriptions.json -->
 
 ```
 repo-description/
@@ -281,15 +281,16 @@ repo-description/
 │   ├── describe.js        # Description unavailable.
 │   ├── index.js           # Description unavailable.
 │   └── utils.js           # Description unavailable.
-├── .env                   # Configure... the environment by setting the `GROQ_API_KEY` variable to provide authentication for Groq API access.
+├── _descriptions.json
+├── .env                   # Defines the GROQ_API_KEY environment variable for authentication.
 ├── .gitignore
-├── .prettierrc.json       # Configure Prettier to enforce single quotes, trailing commas (es5), an 80‑character print width, and a specific ordering of fields in package.json via the prettier‑plugin‑packagejson.
-├── babel.config.js        # [configure] Babel to use @babel/preset‑env with the target set to the current Node version…
-├── CHANGELOG.md           # Documenting the project's version history by listing each release’s features, bug fixes, and related metadata in a Keep‑a‑Changelog format.
-├── CONTRIBUTING.md        # Guide contributors on how to report bugs, suggest enhancements, and submit code via pull requests.
-├── eslint.config.js       # Configure ESLint with global browser, node, and jest globals, recommended core and Prettier rules, and custom JSON/JSONC and YAML parsers and plugins for those file types.
-├── LICENSE                # Granting permission to use, copy, modify, merge, publish, distribute, sublicense, and sell the software freely under the MIT License.
-├── md.config.js           # [Exports] a configuration object that defines default settings (like file descriptions and badge style) and registers the markdown‑magic transform modules used to generate and augment the project’s documentation.
+├── .prettierrc.json       # Description unavailable.
+├── babel.config.js        # Description unavailable.
+├── CHANGELOG.md           # Description unavailable.
+├── CONTRIBUTING.md        # Description unavailable.
+├── eslint.config.js       # Description unavailable.
+├── LICENSE                # Description unavailable.
+├── md.config.js           # Description unavailable.
 ├── package-lock.json      # Description unavailable.
 ├── package.json           # Description unavailable.
 ├── README.md              # Description unavailable.
