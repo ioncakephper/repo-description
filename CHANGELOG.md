@@ -2,11 +2,10 @@
 
 ## [1.0.1](https://github.com/ioncakephper/repo-description/compare/v1.0.0...v1.0.1) (2025-11-02)
 
-
 ### Bug Fixes
 
-* **ci:** correct npm token secret name capitalization ([10f0b09](https://github.com/ioncakephper/repo-description/commit/10f0b098068a4cc018c0f1e450d21bb139b60319))
-* **release:** configure release-please permissions and token ([d1019cb](https://github.com/ioncakephper/repo-description/commit/d1019cbaa588461fdf4d087e918b9e613d260a11))
+- **ci:** correct npm token secret name capitalization ([10f0b09](https://github.com/ioncakephper/repo-description/commit/10f0b098068a4cc018c0f1e450d21bb139b60319))
+- **release:** configure release-please permissions and token ([d1019cb](https://github.com/ioncakephper/repo-description/commit/d1019cbaa588461fdf4d087e918b9e613d260a11))
 
 ## 1.0.0 (2025-11-02)
 

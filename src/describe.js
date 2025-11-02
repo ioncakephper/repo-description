@@ -108,7 +108,20 @@ ${content}`;
     descriptions[path.relative(repoPath, file)] = await queryGroq(prompt);
   }
 
-  return descriptions;
+  const transformDescriptions = (inputDescriptions) => {
+    const outputDescriptions = {};
+    for (const key in inputDescriptions) {
+      if (Object.prototype.hasOwnProperty.call(inputDescriptions, key)) {
+        const newKey = key.replace(/\\/g, '/');
+        outputDescriptions[newKey] = inputDescriptions[key];
+      }
+    }
+    return outputDescriptions;
+  };
+
+  const formattedDescriptions = transformDescriptions(descriptions);
+
+  return formattedDescriptions;
 }
 
 /**
@@ -158,25 +171,12 @@ async function updateMarkdownMagicConfig(
  * @param {boolean} [table=false] - Whether to use a table format for markdown output.
  */
 function saveOutput(
-  inputDescriptions,
+  descriptions,
   outputFile,
   format = 'json',
   summary = false,
   table = false
 ) {
-  const transformDescriptions = (inputDescriptions) => {
-    const outputDescriptions = {};
-    for (const key in inputDescriptions) {
-      if (Object.prototype.hasOwnProperty.call(inputDescriptions, key)) {
-        const newKey = key.replace(/\\/g, '/');
-        outputDescriptions[newKey] = inputDescriptions[key];
-      }
-    }
-    return outputDescriptions;
-  };
-
-  const descriptions = transformDescriptions(inputDescriptions);
-
   if (format === 'json') {
     fs.writeFileSync(outputFile, JSON.stringify(descriptions, null, 2));
   } else if (format === 'markdown') {

@@ -23,6 +23,5 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: repo-description
           target-branch: main
           token: ${{ secrets.GITHUB_TOKEN }}
