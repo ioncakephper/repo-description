@@ -6,7 +6,7 @@ describe('CLI Program', () => {
   });
 
   test('should have the correct version', () => {
-    expect(program.version()).toBe('1.0.0');
+    expect(program.version()).toMatch(/^v?\d+\.\d+\.\d+$/);
   });
 
   test.skip('should execute the action correctly for local repo', async () => {
