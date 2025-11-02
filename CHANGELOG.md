@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/ioncakephper/repo-description/compare/v1.0.2...v1.0.3) (2025-11-02)
+
+
+### Bug Fixes
+
+* **readme:** Update example GitHub repository URL ([8a805c5](https://github.com/ioncakephper/repo-description/commit/8a805c5a8c7896139013f4cb751d3b0797d589ef))
+* **readme:** Update example GitHub repository URL ([d6755ea](https://github.com/ioncakephper/repo-description/commit/d6755eab7d572753319e0136fa2db235fbaddc9a))
+
 ## [1.0.2](https://github.com/ioncakephper/repo-description/compare/v1.0.1...v1.0.2) (2025-11-02)
 
 
