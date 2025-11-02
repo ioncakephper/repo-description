@@ -16,7 +16,7 @@ module.exports = {
           'Guide contributors on how to report bugs, suggest enhancements, and submit code via pull requests.',
         'eslint.config.js':
           'Configure ESLint with global browser, node, and jest globals, recommended core and Prettier rules, and custom JSON/JSONC and YAML parsers and plugins for those file types.',
-        'LICENSE':
+        LICENSE:
           'Granting permission to use, copy, modify, merge, publish, distribute, sublicense, and sell the software freely under the MIT License.',
         'md.config.js':
           '[Exports] a configuration object that defines default settings (like file descriptions and badge style) and registers the markdown‑magic transform modules used to generate and augment the project’s documentation.',
