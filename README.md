@@ -37,7 +37,7 @@ yarn add -g repo-description
 
 ### Usage
 
-### As a JavaScript Module
+#### As a JavaScript Module
 
 You can use `repo-description` directly in your JavaScript or Node.js projects:
 
@@ -99,7 +99,7 @@ async function runDescription() {
 runDescription();
 ```
 
-### As a Command-Line Interface (CLI)
+#### As a Command-Line Interface (CLI)
 
 Use the `repo-describer` command directly in your terminal:
 
