@@ -266,35 +266,35 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Project Structure
 
-<!-- doc-gen fileTreeExtended showSize=false showDescriptions=true descriptionsFile=_descriptions.json -->
+<!-- doc-gen fileTreeExtended showSize=true showDescriptions=true descriptionsFile=_descriptions.json -->
 
 ```
 repo-description/
 ├── __tests__
-│   ├── .gitkeep
-│   └── cli.test.js        # Description unavailable.
+│   ├── .gitkeep (66 B)
+│   └── cli.test.js (792 B)
 ├── .qodo
 │   ├── agents
 │   └── workflows
 ├── src
-│   ├── cli.js             # Description unavailable.
-│   ├── describe.js        # Description unavailable.
-│   ├── index.js           # Description unavailable.
-│   └── utils.js           # Description unavailable.
-├── _descriptions.json
-├── .env                   # Defines the GROQ_API_KEY environment variable for authentication.
-├── .gitignore
-├── .prettierrc.json       # Description unavailable.
-├── babel.config.js        # Description unavailable.
-├── CHANGELOG.md           # Description unavailable.
-├── CONTRIBUTING.md        # Description unavailable.
-├── eslint.config.js       # Description unavailable.
-├── LICENSE                # Description unavailable.
-├── md.config.js           # Description unavailable.
-├── package-lock.json      # Description unavailable.
-├── package.json           # Description unavailable.
-├── README.md              # Description unavailable.
-└── RULES_OF_CONDUCT.md    # Description unavailable.
+│   ├── cli.js (2.7 KB)             # Handles command-line interface parsing and execution.
+│   ├── describe.js (8.3 KB)
+│   ├── index.js (308 B)
+│   └── utils.js (0 B)
+├── _descriptions.json (221 B)
+├── .env (69 B)
+├── .gitignore (2.1 KB)
+├── .prettierrc.json (563 B)
+├── babel.config.js (92 B)
+├── CHANGELOG.md (2.3 KB)
+├── CONTRIBUTING.md (2.9 KB)
+├── eslint.config.js (1.1 KB)
+├── LICENSE (1.0 KB)
+├── md.config.js (438 B)
+├── package-lock.json (297.6 KB)
+├── package.json (3.1 KB)           # Defines project metadata, scripts, and dependencies.
+├── README.md (16.6 KB)             # Provides an overview of the repository and its usage.
+└── RULES_OF_CONDUCT.md (4.9 KB)
 ```
 
 <!-- end-doc-gen -->

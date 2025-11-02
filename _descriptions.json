@@ -1,20 +1,5 @@
 {
-  ".env": "Defines the GROQ_API_KEY environment variable for authentication.",
-  ".prettierrc.json": "Description unavailable.",
-  ".vscode/launch.json": "Description unavailable.",
-  "babel.config.js": "Description unavailable.",
-  "CHANGELOG.md": "Description unavailable.",
-  "CONTRIBUTING.md": "Description unavailable.",
-  "eslint.config.js": "Description unavailable.",
-  "LICENSE": "Description unavailable.",
-  "md.config.js": "Description unavailable.",
-  "package-lock.json": "Description unavailable.",
-  "package.json": "Description unavailable.",
-  "README.md": "Description unavailable.",
-  "RULES_OF_CONDUCT.md": "Description unavailable.",
-  "src/cli.js": "Description unavailable.",
-  "src/describe.js": "Description unavailable.",
-  "src/index.js": "Description unavailable.",
-  "src/utils.js": "Description unavailable.",
-  "__tests__/cli.test.js": "Description unavailable."
+  "README.md": "Provides an overview of the repository and its usage.",
+  "src/cli.js": "Handles command-line interface parsing and execution.",
+  "package.json": "Defines project metadata, scripts, and dependencies."
 }
