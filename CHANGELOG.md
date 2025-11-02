@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/ioncakephper/repo-description/compare/v1.0.1...v1.0.2) (2025-11-02)
+
+
+### Bug Fixes
+
+* **config:** Normalize object key quoting ([44f6239](https://github.com/ioncakephper/repo-description/commit/44f62399b36a8a881d36a4daf108071f11a698f9))
+
 ## [1.0.1](https://github.com/ioncakephper/repo-description/compare/v1.0.0...v1.0.1) (2025-11-02)
 
 ### Bug Fixes
