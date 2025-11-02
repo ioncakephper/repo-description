@@ -4,6 +4,7 @@ module.exports = {
       style: 'for-the-badge',
     },
   },
+
   transforms: {
     fileTreeExtended: require('markdown-magic-transform-treefile-extended'),
     BADGES: require('markdown-magic-transform-badges'),
