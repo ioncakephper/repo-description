@@ -4,7 +4,7 @@
 
 <!-- doc-gen BADGES -->
 
-[![npm version](https://img.shields.io/npm/v/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![npm downloads](https://img.shields.io/npm/dw/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description)
+[![npm version](https://img.shields.io/npm/v/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![npm downloads](https://img.shields.io/npm/dw/repo-description.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://www.npmjs.com/package/repo-description) [![actions status](https://img.shields.io/github/actions/workflow/status/IonGireada/repo-description/ci.yml?branch=main&style=for-the-badge)](https://github.com/IonGireada/repo-description/actions) [![codecov](https://img.shields.io/codecov/c/github/IonGireada/repo-description?branch=main&style=for-the-badge)](https://codecov.io/gh/IonGireada/repo-description) [![release](https://img.shields.io/github/v/release/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/releases) [![maintained](https://img.shields.io/github/commit-activity/y/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/graphs/commit-activity) [![stars](https://img.shields.io/github/stars/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/stargazers) [![forks](https://img.shields.io/github/forks/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/network/members) [![watchers](https://img.shields.io/github/watchers/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/watchers) [![last commit](https://img.shields.io/github/last-commit/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/commits) [![contributors](https://img.shields.io/github/contributors/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/graphs/contributors) [![issues](https://img.shields.io/github/issues/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/issues) [![pull requests](https://img.shields.io/github/issues-pr/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/pulls) [![repo size](https://img.shields.io/github/repo-size/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description) [![top language](https://img.shields.io/github/languages/top/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description) [![languages](https://img.shields.io/github/languages/count/IonGireada/repo-description?style=for-the-badge)](https://github.com/IonGireada/repo-description/search?l=)
 
 <!-- end-doc-gen -->
 
@@ -63,7 +63,12 @@ async function runDescription() {
 
   console.log('Generating Markdown descriptions...');
   const markdownDescriptions = await describeRepo(repoPath, markdownOptions);
-  saveOutput(markdownDescriptions, markdownOptions.output, markdownOptions.format, markdownOptions.summary);
+  saveOutput(
+    markdownDescriptions,
+    markdownOptions.output,
+    markdownOptions.format,
+    markdownOptions.summary
+  );
   console.log(`Markdown descriptions saved to ${markdownOptions.output}`);
 
   // Scenario 3: Generate descriptions for a remote GitHub repository
@@ -77,7 +82,9 @@ async function runDescription() {
   console.log(`Generating descriptions for ${remoteRepoPath}...`);
   const remoteDescriptions = await describeRepo(remoteRepoPath, remoteOptions);
   saveOutput(remoteDescriptions, remoteOptions.output, remoteOptions.format);
-  console.log(`Remote repository descriptions saved to ${remoteOptions.output}`);
+  console.log(
+    `Remote repository descriptions saved to ${remoteOptions.output}`
+  );
 }
 
 runDescription();
@@ -150,43 +157,43 @@ Options:
 
 <!-- doc-gen COMMANDS format=list -->
 
-- `describe` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [77](./package.json#L77))
+- `describe` — Generates AI-powered descriptions for repository files and outputs them in various formats. (line [89](./package.json#L89))
 
   ```bash
   node src/cli.js . descriptions.json && node src/cli.js . descriptions.md --format markdown && node src/cli.js . descriptions-table.md --format markdown --table && node src/cli.js . descriptions-summary.md --format markdown --summary && node src/cli.js . descriptions-table-summary.md --format markdown --table --summary
   ```
 
-- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [73](./package.json#L73))
+- `docs` — Generates documentation by processing Markdown files with markdown-magic. (line [94](./package.json#L94))
 
   ```bash
   npx markdown-magic@3.7.0 **/*.md -c md.config.js
   ```
 
-- `format` — Formats the codebase using Prettier. (line [71](./package.json#L71))
+- `format` — Formats the codebase using Prettier. (line [92](./package.json#L92))
 
   ```bash
   prettier --write .
   ```
 
-- `lint` — Lints the codebase for potential errors and style violations. (line [69](./package.json#L69))
+- `lint` — Lints the codebase for potential errors and style violations. (line [90](./package.json#L90))
 
   ```bash
   eslint src/ **/*.js **/*.json
   ```
 
-- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [70](./package.json#L70))
+- `lint:fix` — Lints the codebase and automatically fixes fixable issues. (line [91](./package.json#L91))
 
   ```bash
   eslint --fix src/ **/*.js **/*.json
   ```
 
-- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [72](./package.json#L72))
+- `prep` — Prepares the codebase by generating documentation, linting, and formatting. (line [93](./package.json#L93))
 
   ```bash
   npm run docs && npm run lint:fix && npm run format
   ```
 
-- `test` — Runs the test suite using Jest. (line [76](./package.json#L76))
+- `test` — Runs the test suite using Jest. (line [88](./package.json#L88))
 
   ```bash
   jest --passWithNoTests
