@@ -1,6 +1,6 @@
 {
   "name": "repo-description",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AI-powered CLI that automatically generates clear, natural-language descriptions of every file in a repository.",
   "keywords": [
     "cli",

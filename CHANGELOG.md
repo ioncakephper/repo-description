@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/ioncakephper/repo-description/compare/v1.0.3...v1.0.4) (2025-11-02)
+
+
+### Bug Fixes
+
+* **config:** prevent empty markdown-magic transform entry ([451d95c](https://github.com/ioncakephper/repo-description/commit/451d95c2376d7bf89a273cee5b31a9ab99ba8549))
+
 ## [1.0.3](https://github.com/ioncakephper/repo-description/compare/v1.0.2...v1.0.3) (2025-11-02)
 
 ### Bug Fixes
