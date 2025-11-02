@@ -8,7 +8,7 @@ Please note that this project is released with a [Code of Conduct](RULES_OF_COND
 
 ### Reporting Bugs
 
-If you find a bug, please open an issue on our [GitHub Issues page](https://github.com/IonGireada/repo-description/issues). When reporting a bug, please include:
+If you find a bug, please open an issue on our [GitHub Issues page](https://github.com/ioncakephper/repo-description/issues). When reporting a bug, please include:
 
 - A clear and concise description of the bug.
 - Steps to reproduce the behavior.
@@ -18,7 +18,7 @@ If you find a bug, please open an issue on our [GitHub Issues page](https://gith
 
 ### Suggesting Enhancements
 
-Have an idea for a new feature or an improvement to an existing one? We'd love to hear it! Please open an issue on our [GitHub Issues page](https://github.com/IonGireada/repo-description/issues) and describe your suggestion.
+Have an idea for a new feature or an improvement to an existing one? We'd love to hear it! Please open an issue on our [GitHub Issues page](https://github.com/ioncakephper/repo-description/issues) and describe your suggestion.
 
 ### Code Contributions
 
