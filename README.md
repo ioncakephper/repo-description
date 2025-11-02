@@ -21,15 +21,29 @@
 
 ### Installation
 
-<!-- doc-gen INSTALL global=true -->
-```bash
-npm install -g repo-description
-```
+- Install *globally*, making `repo-describer` available as a CLI on any path on your system:
 
-```bash
-yarn add -g repo-description
-```
-<!-- end-doc-gen -->
+    <!-- doc-gen INSTALL global=true -->
+    ```bash
+    npm install -g repo-description
+    ```
+
+    ```bash
+    yarn add -g repo-description
+    ```
+    <!-- end-doc-gen -->
+
+- Install *locally* in your repository, ready to use in your code.
+
+    <!-- doc-gen INSTALL -->
+    ```bash
+    npm install repo-description
+    ```
+
+    ```bash
+    yarn add repo-description
+    ```
+    <!-- end-doc-gen -->
 
 ### Usage
 
@@ -285,7 +299,7 @@ repo-description/
 ├── md.config.js (438 B)            # configure markdown-magic settings for automated documentation updates.
 ├── package-lock.json (297.6 KB)    # lock exact versions of installed npm dependencies.
 ├── package.json (3.1 KB)           # define project metadata, dependencies, and npm scripts.
-├── README.md (17.4 KB)             # introduce the project, its purpose, features, and usage instructions.
+├── README.md (17.7 KB)             # introduce the project, its purpose, features, and usage instructions.
 └── RULES_OF_CONDUCT.md (4.9 KB)    # establish community standards and expected behavior for contributors.
 ```
 <!-- end-doc-gen -->
