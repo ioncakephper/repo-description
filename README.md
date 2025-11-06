@@ -21,28 +21,28 @@
 
 ### Installation
 
-- Install *globally*, making `repo-describer` available as a CLI on any path on your system:
+- Install _globally_, making `repo-describer` available as a CLI on any path on your system:
 
     <!-- doc-gen INSTALL global=true -->
-    ```bash
-    npm install -g repo-description
-    ```
+  ```bash
+  npm install -g repo-description
+  ```
 
-    ```bash
-    yarn add -g repo-description
-    ```
+  ```bash
+  yarn add -g repo-description
+  ```
     <!-- end-doc-gen -->
 
-- Install *locally* in your repository, ready to use in your code.
+- Install _locally_ in your repository, ready to use in your code.
 
     <!-- doc-gen INSTALL -->
-    ```bash
-    npm install repo-description
-    ```
+  ```bash
+  npm install repo-description
+  ```
 
-    ```bash
-    yarn add repo-description
-    ```
+  ```bash
+  yarn add repo-description
+  ```
     <!-- end-doc-gen -->
 
 ### Usage
@@ -277,29 +277,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```
 repo-description/
 ├── __tests__
-│   ├── .gitkeep (66 B)             # preserve empty test directory structure in version control.
-│   └── cli.test.js (807 B)         # test CLI functionality to ensure correct behavior.
+│   └── .gitkeep (66 B)
 ├── .qodo
 │   ├── agents
 │   └── workflows
 ├── src
-│   ├── cli.js (2.7 KB)             # implement command-line interface logic for running the tool.
-│   ├── describe.js (8.3 KB)        # handle repository file analysis and description generation.
-│   ├── index.js (308 B)            # export main module entry point for external usage.
-│   └── utils.js (0 B)              # provide utility functions to support core operations.
-├── _descriptions.json (1.5 KB)
-├── .env (69 B)
-├── .gitignore (2.1 KB)             # define files and directories to be ignored by Git version control.
-├── .prettierrc.json (563 B)        # configure Prettier code formatting rules for consistent style.
-├── babel.config.js (92 B)          # set up Babel configuration for JavaScript transpilation.
-├── CHANGELOG.md (2.6 KB)
-├── CONTRIBUTING.md (2.9 KB)        # outline contribution guidelines for developers working on the project.
-├── eslint.config.js (1.1 KB)       # configure ESLint rules for linting JavaScript and JSON files.
-├── LICENSE (1.0 KB)                # declare project licensing terms under the MIT License.
-├── md.config.js (438 B)            # configure markdown-magic settings for automated documentation updates.
-├── package-lock.json (297.6 KB)    # lock exact versions of installed npm dependencies.
-├── package.json (3.1 KB)           # define project metadata, dependencies, and npm scripts.
-├── README.md (17.7 KB)             # introduce the project, its purpose, features, and usage instructions.
-└── RULES_OF_CONDUCT.md (4.9 KB)    # establish community standards and expected behavior for contributors.
+│   ├── cli.js (2.7 KB)             # Sets up the `repo-describer` CLI with Commander, parses arguments and options, and orchestrates repository description generation, output saving, and optional config updates.
+│   ├── describe.js (8.3 KB)        # [Generate] AI‑powered descriptions of a Git repository’s files, persist those descriptions, and update markdown‑magic configuration accordingly.
+│   ├── index.js (308 B)            # Export... the `describeRepo`, `saveOutput`, and `updateMarkdownMagicConfig` functions as the public API of the `repo-describer` library.
+│   └── utils.js (0 B)              # I’m happy to help, but I need to see the actual contents of **src\utils.js** in order to craft an accurate one‑sentence “[action]…” description. Could you paste the file’s code (or at least the relevant portion) here?
+├── _descriptions.json (2.9 KB)     # Map each repository file to a concise description of its purpose.
+├── .env (69 B)                     # Sets the GROQ_API_KEY environment variable for API authentication.
+├── .gitignore (2.1 KB)
+├── .prettierrc.json (563 B)        # Configure Prettier to use single quotes, trailing commas (es5), an 80‑character line width, and enforce a specific ordering of fields in package.json via the prettier-plugin-packagejson.
+├── babel.config.js (92 B)          # Configure Babel to use the `@babel/preset‑env` preset with the target set to the current Node version.
+├── CHANGELOG.md (2.5 KB)           # [record] a chronological list of version releases with dates and the associated bug‑fix entries for each version.
+├── CONTRIBUTING.md (2.9 KB)        # [Guide] contributors on reporting bugs, suggesting enhancements, and submitting code changes via pull requests.
+├── eslint.config.js (1.1 KB)       # Configure ESLint with base and Prettier settings, and add specialized parsers and recommended rules for JavaScript, JSON/JSONC, and YAML files.
+├── LICENSE (1.0 KB)                # Granting permission to use, copy, modify, merge, publish, distribute, sublicense, and sell the software under the terms of the MIT License.
+├── md.config.js (438 B)            # Exports a configuration object that sets default badge styling and registers multiple markdown‑magic transform plugins for file trees, badges, installation, acknowledgements, and command scripts.
+├── package-lock.json (289.8 KB)    # [Locks] exact versions of the project’s direct and transitive npm dependencies to ensure reproducible, deterministic installations.
+├── package.json (3.0 KB)           # Specify the package metadata, entry points, scripts, and distribution settings for the AI‑powered “repo‑describer” CLI tool.
+├── README.md (17.7 KB)             # Introduces the AI‑powered CLI tool `repo‑description`, its purpose and usage overview, and displays project status badges.
+└── RULES_OF_CONDUCT.md (4.9 KB)    # [Establish] a comprehensive, harassment‑free code of conduct that pledges inclusive, respectful behavior and outlines acceptable and unacceptable actions for contributors.
 ```
 <!-- end-doc-gen -->
